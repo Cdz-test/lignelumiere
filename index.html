@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Ligne & Lumière — Architectes</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{beton:'#e9e5dc',encre:'#141412',ocre:'#c4572a',pierre:'#8a857a'},fontFamily:{display:['"Syne"','sans-serif'],serif:['"Instrument Serif"','serif'],body:['"Inter"','sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <meta name="description" content="Ligne & Lumière">
+</head>
+<body class="bg-beton text-encre font-body antialiased overflow-x-hidden">
+
+<header class="fixed top-0 inset-x-0 z-50 mix-blend-difference text-white">
+<nav class="flex items-center justify-between px-5 md:px-10 py-5">
+<a href="#" class="font-display font-extrabold tracking-tight text-lg">L&amp;L<span class="text-[#c4572a]">.</span></a>
+<div class="hidden md:flex gap-8 text-sm">
+<a href="#manifeste" class="hover:opacity-60 transition">Manifeste</a>
+<a href="#projets" class="hover:opacity-60 transition">Projets</a>
+<a href="#methode" class="hover:opacity-60 transition">Méthode</a>
+<a href="#equipe" class="hover:opacity-60 transition">Atelier</a>
+</div>
+<a href="#contact" class="text-sm border border-white/60 rounded-full px-4 py-2 hover:bg-white hover:text-black transition">Un projet ?</a>
+</nav>
+</header>
+
+<section class="relative min-h-[100svh] overflow-hidden bg-encre text-beton">
+<style>
+@keyframes heroImg{from{clip-path:inset(100% 0 0 0);transform:scale(1.25)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+@keyframes line{from{transform:translateY(110%)}to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+@keyframes drawX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes drawY{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.h-img{animation:heroImg 1.8s cubic-bezier(0.16,1,0.3,1) both}
+.h-line>span{display:inline-block;animation:line 1.3s cubic-bezier(0.16,1,0.3,1) both}
+.h-fade{animation:fadeUp 1.2s cubic-bezier(0.16,1,0.3,1) both}
+.gx{transform-origin:left;animation:drawX 2s cubic-bezier(0.16,1,0.3,1) both}
+.gy{transform-origin:top;animation:drawY 2s cubic-bezier(0.16,1,0.3,1) both}
+@media (prefers-reduced-motion:reduce){.h-img,.h-line>span,.h-fade,.gx,.gy{animation:none}}
+</style>
+<div class="absolute inset-0 md:left-[38%] h-img">
+<img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Façade blanche d'un bâtiment contemporain aux lignes courbes" class="w-full h-full object-cover opacity-60 md:opacity-90">
+<div class="absolute inset-0 bg-gradient-to-r from-encre via-encre/30 to-transparent"></div>
+</div>
+<div class="absolute left-0 right-0 top-[22%] h-px bg-beton/20 gx" style="animation-delay:.3s"></div>
+<div class="absolute left-0 right-0 bottom-[18%] h-px bg-beton/20 gx" style="animation-delay:.5s"></div>
+<div class="absolute top-0 bottom-0 left-[38%] w-px bg-beton/20 gy hidden md:block" style="animation-delay:.4s"></div>
+<div class="relative z-10 flex flex-col justify-end min-h-[100svh] px-5 md:px-10 pb-[8vh] pt-32">
+<p class="h-fade text-xs tracking-[0.3em] uppercase text-beton/60 mb-6" style="animation-delay:.6s">Cabinet d'architecture · Lyon · depuis 2009</p>
+<h1 class="font-display font-extrabold leading-[0.85] tracking-[-0.05em] text-[clamp(3.2rem,12vw,11rem)]">
+<span class="h-line block overflow-hidden"><span style="animation-delay:.2s">Bâtir</span></span>
+<span class="h-line block overflow-hidden"><span style="animation-delay:.35s"><em class="font-serif font-normal italic text-ocre tracking-tight">la</em> lumière.</span></span>
+</h1>
+<div class="h-fade mt-10 flex flex-col md:flex-row md:items-end gap-8 md:justify-between" style="animation-delay:1s">
+<p class="max-w-md text-beton/75 text-lg font-light leading-relaxed">Nous dessinons des maisons, des lieux de travail et des équipements publics où la lumière naturelle est le premier matériau.</p>
+<a href="#projets" class="group inline-flex items-center gap-4 font-display font-bold">
+<span class="w-14 h-14 rounded-full bg-ocre grid place-items-center group-hover:scale-110 transition duration-500"><i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition"></i></span>Voir les projets</a>
+</div>
+</div>
+<div class="absolute right-5 md:right-10 top-28 font-serif italic text-beton/60 text-sm h-fade" style="animation-delay:1.2s">45°45′N — 4°50′E</div>
+</section>
+
+<section class="bg-ocre text-encre py-5 overflow-hidden border-y border-encre">
+<style>@keyframes marq{to{transform:translateX(-50%)}}.marq{animation:marq 30s linear infinite}@media (prefers-reduced-motion:reduce){.marq{animation:none}}</style>
+<div class="marq flex w-max gap-10 font-display font-bold text-2xl md:text-4xl tracking-tight whitespace-nowrap">
+<span>Habitat ✦ Réhabilitation ✦ Équipements publics ✦ Bois &amp; pierre ✦ Bas carbone ✦ Architecture intérieure ✦</span>
+<span aria-hidden="true">Habitat ✦ Réhabilitation ✦ Équipements publics ✦ Bois &amp; pierre ✦ Bas carbone ✦ Architecture intérieure ✦</span>
+</div>
+</section>
+
+<section id="manifeste" class="px-5 md:px-10 py-28 md:py-40 relative">
+<style>@media (prefers-reduced-motion: no-preference) { @supports (animation-timeline: view()) { .reveal { animation: reveal both cubic-bezier(0.16, 1, 0.3, 1); animation-timeline: view(); animation-range: entry 0% entry 90%; } } } @keyframes reveal { from { opacity: 0; transform: translateY(3rem) scale(0.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){.fillw{background:linear-gradient(90deg,#141412 50%,#14141226 50%) 100% 0/200% 100% no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fill linear both;animation-timeline:view();animation-range:entry 30% cover 55%}}}
+@keyframes fill{to{background-position:0 0}}</style>
+<div class="grid md:grid-cols-12 gap-10">
+<p class="md:col-span-3 text-xs tracking-[0.3em] uppercase text-pierre reveal">01 — Manifeste</p>
+<div class="md:col-span-9">
+<p class="fillw font-display font-bold tracking-[-0.03em] leading-[1.05] text-[clamp(1.9rem,4.6vw,4.2rem)]">Un bâtiment réussi ne se remarque pas d'abord. Il se ressent : un seuil qui ralentit, une fenêtre qui cadre un arbre, une pièce où l'on reste plus longtemps que prévu.</p>
+<div class="mt-16 grid sm:grid-cols-3 gap-8 border-t border-encre/20 pt-10">
+<div class="reveal"><p class="font-display font-extrabold text-6xl tracking-tighter">140<span class="text-ocre">+</span></p><p class="text-pierre mt-2">projets livrés en Rhône-Alpes et au-delà</p></div>
+<div class="reveal"><p class="font-display font-extrabold text-6xl tracking-tighter">62<span class="text-ocre">%</span></p><p class="text-pierre mt-2">de nos chantiers en matériaux biosourcés</p></div>
+<div class="reveal"><p class="font-display font-extrabold text-6xl tracking-tighter">11</p><p class="text-pierre mt-2">prix et distinctions, dont l'Équerre d'argent 2024</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projets" class="relative bg-encre text-beton" style="view-timeline-name:--pin;height:400vh">
+<style>@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){.track{animation:slide linear both;animation-timeline:--pin;animation-range:contain 0% contain 100%}}}@keyframes slide{to{transform:translateX(calc(-100% + 100vw))}}</style>
+<div class="sticky top-0 h-[100svh] overflow-hidden flex flex-col justify-center">
+<div class="px-5 md:px-10 flex justify-between items-end mb-8">
+<h2 class="font-display font-extrabold tracking-[-0.04em] text-[clamp(2.5rem,7vw,6rem)] leading-none">Projets <em class="font-serif font-normal italic text-ocre">choisis</em></h2>
+<p class="hidden md:block text-beton/50 text-sm">Faites défiler →</p>
+</div>
+<div class="track flex gap-6 px-5 md:px-10 w-max">
+<article class="group w-[78vw] md:w-[40vw] shrink-0">
+<div class="overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Maison contemporaine avec piscine et grandes baies vitrées" class="w-full h-full object-cover group-hover:scale-105 transition duration-[1.2s]"></div>
+<div class="flex justify-between mt-4"><h3 class="font-display font-bold text-xl">Maison des Cèdres</h3><span class="text-beton/50">Habitat · 2025</span></div>
+</article>
+<article class="group w-[78vw] md:w-[30vw] shrink-0 md:mt-16">
+<div class="overflow-hidden aspect-[3/4] md:aspect-[4/5]"><img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Façade géométrique en béton sous un ciel clair" class="w-full h-full object-cover group-hover:scale-105 transition duration-[1.2s]"></div>
+<div class="flex justify-between mt-4"><h3 class="font-display font-bold text-xl">Médiathèque Vaise</h3><span class="text-beton/50">Public · 2024</span></div>
+</article>
+<article class="group w-[78vw] md:w-[42vw] shrink-0">
+<div class="overflow-hidden aspect-[4/3]"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Intérieur lumineux avec séjour ouvert et matériaux naturels" class="w-full h-full object-cover group-hover:scale-105 transition duration-[1.2s]"></div>
+<div class="flex justify-between mt-4"><h3 class="font-display font-bold text-xl">Loft Croix-Rousse</h3><span class="text-beton/50">Réhabilitation · 2024</span></div>
+</article>
+<article class="group w-[78vw] md:w-[32vw] shrink-0 md:mt-24">
+<div class="overflow-hidden aspect-[4/5]"><img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Détail d'une façade ondulée aux lignes répétées" class="w-full h-full object-cover group-hover:scale-105 transition duration-[1.2s]"></div>
+<div class="flex justify-between mt-4"><h3 class="font-display font-bold text-xl">Pavillon Onde</h3><span class="text-beton/50">Culturel · 2023</span></div>
+</article>
+<div class="w-[70vw] md:w-[30vw] shrink-0 flex items-center">
+<a href="#contact" class="group font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-none hover:text-ocre transition">Le prochain<br>sera le vôtre <i class="fa-solid fa-arrow-right text-3xl group-hover:translate-x-3 transition"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="expertises" class="px-5 md:px-10 py-28 md:py-36">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<h2 class="reveal font-display font-extrabold tracking-[-0.04em] text-[clamp(2.5rem,7vw,6rem)] leading-[0.9]">Ce que<br>nous <em class="font-serif font-normal italic text-ocre">faisons</em></h2>
+<p class="reveal max-w-sm text-pierre">De l'esquisse au dernier coup de pinceau, une seule équipe vous accompagne.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:h-[640px]">
+<div class="reveal group relative md:col-span-2 md:row-span-2 overflow-hidden min-h-[320px]">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Plans d'architecture et outils de dessin sur une table" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-[1.2s]">
+<div class="absolute inset-0 bg-gradient-to-t from-encre/90 to-transparent"></div>
+<div class="absolute bottom-0 p-8 text-beton"><i class="fa-solid fa-compass-drafting text-ocre text-2xl"></i><h3 class="font-display font-bold text-3xl mt-3">Conception architecturale</h3><p class="text-beton/70 mt-2 max-w-sm">Maisons individuelles, logements collectifs, extensions : esquisse, permis, exécution.</p></div>
+</div>
+<div class="reveal group bg-encre text-beton p-8 flex flex-col justify-between hover:-translate-y-1 transition duration-500">
+<i class="fa-solid fa-recycle text-ocre text-2xl group-hover:rotate-180 transition duration-700"></i><div><h3 class="font-display font-bold text-xl">Réhabilitation</h3><p class="text-beton/60 text-sm mt-2">Transformer l'existant plutôt que démolir.</p></div>
+</div>
+<div class="reveal group bg-ocre p-8 flex flex-col justify-between hover:-translate-y-1 transition duration-500">
+<i class="fa-solid fa-tree text-2xl"></i><div><h3 class="font-display font-bold text-xl">Bas carbone</h3><p class="text-encre/70 text-sm mt-2">Bois, paille, terre crue, pierre locale.</p></div>
+</div>
+<div class="reveal group md:col-span-2 border border-encre/20 p-8 flex flex-col md:flex-row justify-between gap-6 hover:bg-white/50 transition duration-500">
+<div><i class="fa-solid fa-couch text-ocre text-2xl"></i><h3 class="font-display font-bold text-xl mt-4">Architecture intérieure</h3><p class="text-pierre text-sm mt-2 max-w-xs">Mobilier sur mesure, matières, lumière artificielle.</p></div>
+<div class="self-end"><i class="fa-solid fa-landmark text-ocre text-2xl"></i><h3 class="font-display font-bold text-xl mt-4">Commande publique</h3><p class="text-pierre text-sm mt-2 max-w-xs">Écoles, médiathèques, concours.</p></div>
+</div>
+</div>
+</section>
+
+<section id="methode" class="bg-[#dcd6ca] px-5 md:px-10 py-28 md:py-36">
+<div class="grid md:grid-cols-12 gap-12">
+<div class="md:col-span-5 md:sticky md:top-28 self-start">
+<p class="text-xs tracking-[0.3em] uppercase text-pierre mb-6">04 — Méthode</p>
+<h2 class="reveal font-display font-extrabold tracking-[-0.04em] text-[clamp(2.5rem,6vw,5rem)] leading-[0.9]">Quatre temps, <em class="font-serif font-normal italic text-ocre">zéro</em> surprise.</h2>
+<div class="reveal mt-10 overflow-hidden aspect-[4/5] hidden md:block"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Espace de travail lumineux d'un atelier" class="w-full h-full object-cover"></div>
+</div>
+<ol class="md:col-span-7 space-y-4">
+<li class="reveal group bg-beton p-8 md:p-10 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(196,87,42,.5)] transition duration-500"><span class="font-serif italic text-ocre text-5xl">i.</span><h3 class="font-display font-bold text-2xl mt-4">Écouter le lieu</h3><p class="text-pierre mt-3 leading-relaxed">Visite, relevés, course du soleil, usages. Nous passons du temps sur place avant le premier trait.</p></li>
+<li class="reveal group bg-beton p-8 md:p-10 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(196,87,42,.5)] transition duration-500"><span class="font-serif italic text-ocre text-5xl">ii.</span><h3 class="font-display font-bold text-2xl mt-4">Esquisser ensemble</h3><p class="text-pierre mt-3 leading-relaxed">Maquettes en carton et en 3D, ateliers avec vous : le projet se construit en dialogue.</p></li>
+<li class="reveal group bg-beton p-8 md:p-10 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(196,87,42,.5)] transition duration-500"><span class="font-serif italic text-ocre text-5xl">iii.</span><h3 class="font-display font-bold text-2xl mt-4">Préciser &amp; autoriser</h3><p class="text-pierre mt-3 leading-relaxed">Permis de construire, chiffrage, consultation des entreprises. Budget tenu, délais annoncés.</p></li>
+<li class="reveal group bg-beton p-8 md:p-10 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgba(196,87,42,.5)] transition duration-500"><span class="font-serif italic text-ocre text-5xl">iv.</span><h3 class="font-display font-bold text-2xl mt-4">Bâtir &amp; livrer</h3><p class="text-pierre mt-3 leading-relaxed">Suivi de chantier hebdomadaire, réception, et une visite un an après pour voir vivre le lieu.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="relative h-[80svh] overflow-hidden">
+<style>@media (prefers-reduced-motion:no-preference){@supports (animation-timeline:view()){.par{animation:par linear both;animation-timeline:view()}}}@keyframes par{from{transform:translateY(-12%) scale(1.15)}to{transform:translateY(12%) scale(1.15)}}</style>
+<img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&amp;fit=crop&amp;w=2000&amp;q=80" alt="Façade d'immeuble blanc aux balcons répétés, vue en contre-plongée" class="par absolute inset-0 w-full h-full object-cover">
+<div class="absolute inset-0 bg-encre/40"></div>
+<blockquote class="relative z-10 h-full flex flex-col justify-center px-5 md:px-20 text-beton">
+<p class="reveal font-serif italic text-[clamp(2rem,5.5vw,5rem)] leading-[1] max-w-5xl">« Ils ont compris notre maison avant nous. Chaque matin, la lumière nous le rappelle. »</p>
+<footer class="reveal mt-8 text-sm tracking-[0.2em] uppercase">Claire &amp; Mathieu R. — Maison des Cèdres</footer>
+</blockquote>
+</section>
+
+<section id="equipe" class="px-5 md:px-10 py-28 md:py-36">
+<h2 class="reveal font-display font-extrabold tracking-[-0.04em] text-[clamp(2.5rem,7vw,6rem)] leading-[0.9] mb-16">L'<em class="font-serif font-normal italic text-ocre">atelier</em></h2>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<figure class="reveal group"><div class="overflow-hidden aspect-[3/4]"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Portrait d'Hélène Marchal, architecte associée" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"></div><figcaption class="mt-4 flex justify-between"><span class="font-display font-bold text-lg">Hélène Marchal</span><span class="text-pierre text-sm">Architecte associée</span></figcaption></figure>
+<figure class="reveal group lg:mt-20"><div class="overflow-hidden aspect-[3/4]"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Portrait de Julien Ferrand, architecte associé" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"></div><figcaption class="mt-4 flex justify-between"><span class="font-display font-bold text-lg">Julien Ferrand</span><span class="text-pierre text-sm">Architecte associé</span></figcaption></figure>
+<figure class="reveal group"><div class="overflow-hidden aspect-[3/4]"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Portrait de Sofia Benali, architecte d'intérieur" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-700"></div><figcaption class="mt-4 flex justify-between"><span class="font-display font-bold text-lg">Sofia Benali</span><span class="text-pierre text-sm">Architecte d'intérieur</span></figcaption></figure>
+</div>
+</section>
+
+<section class="bg-encre text-beton px-5 md:px-10 py-24">
+<div class="grid md:grid-cols-3 gap-10 items-start">
+<h2 class="reveal font-display font-bold text-3xl tracking-tight">Distinctions</h2>
+<ul class="md:col-span-2 divide-y divide-beton/15 border-y border-beton/15">
+<li class="reveal group flex justify-between py-5 hover:pl-4 hover:text-ocre transition-all duration-500"><span>Équerre d'argent — Médiathèque Vaise</span><span class="text-beton/50">2024</span></li>
+<li class="reveal group flex justify-between py-5 hover:pl-4 hover:text-ocre transition-all duration-500"><span>Prix national de la construction bois</span><span class="text-beton/50">2023</span></li>
+<li class="reveal group flex justify-between py-5 hover:pl-4 hover:text-ocre transition-all duration-500"><span>Lauréat Europan — Saint-Étienne</span><span class="text-beton/50">2021</span></li>
+<li class="reveal group flex justify-between py-5 hover:pl-4 hover:text-ocre transition-all duration-500"><span>Publication AMC — Maisons de l'année</span><span class="text-beton/50">2020</span></li>
+</ul>
+</div>
+</section>
+
+<section id="contact" class="px-5 md:px-10 py-28 md:py-40">
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<h2 class="reveal font-display font-extrabold tracking-[-0.05em] text-[clamp(3rem,9vw,8rem)] leading-[0.85]">Parlons<br><em class="font-serif font-normal italic text-ocre">de votre</em><br>lieu.</h2>
+<div class="reveal mt-12 space-y-3 text-lg">
+<a href="mailto:bonjour@ligne-lumiere.fr" class="block hover:text-ocre transition"><i class="fa-regular fa-envelope mr-3 text-ocre"></i>bonjour@ligne-lumiere.fr</a>
+<a href="tel:+33478000000" class="block hover:text-ocre transition"><i class="fa-solid fa-phone mr-3 text-ocre"></i>04 78 00 00 00</a>
+<p><i class="fa-solid fa-location-dot mr-3 text-ocre"></i>12 quai Saint-Vincent, 69001 Lyon</p>
+</div>
+</div>
+<form class="reveal space-y-8 self-end" onsubmit="event.preventDefault();this.querySelector('button').textContent='Merci, à très vite ✦'">
+<input required="" placeholder="Votre nom" class="w-full bg-transparent border-b border-encre/30 py-4 text-lg focus:outline-none focus:border-ocre transition placeholder:text-pierre">
+<input required="" type="email" placeholder="Votre e-mail" class="w-full bg-transparent border-b border-encre/30 py-4 text-lg focus:outline-none focus:border-ocre transition placeholder:text-pierre">
+<select class="w-full bg-transparent border-b border-encre/30 py-4 text-lg focus:outline-none focus:border-ocre"><option>Construction neuve</option><option>Réhabilitation / extension</option><option>Architecture intérieure</option><option>Commande publique</option></select>
+<textarea rows="3" placeholder="Parlez-nous du terrain, du rêve, du budget…" class="w-full bg-transparent border-b border-encre/30 py-4 text-lg focus:outline-none focus:border-ocre transition placeholder:text-pierre resize-none"></textarea>
+<button class="w-full bg-encre text-beton font-display font-bold py-5 rounded-full hover:bg-ocre hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-ocre/40 transition duration-500">Envoyer la demande</button>
+</form>
+</div>
+</section>
+
+<footer class="bg-encre text-beton px-5 md:px-10 pt-20 pb-8 overflow-hidden">
+<div class="flex flex-col md:flex-row justify-between gap-8 text-sm text-beton/60">
+<p>Atelier Ligne &amp; Lumière — SARL d'architecture inscrite à l'Ordre des architectes</p>
+<div class="flex gap-6 text-lg"><a href="#" aria-label="Instagram" class="hover:text-ocre transition"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="LinkedIn" class="hover:text-ocre transition"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="Pinterest" class="hover:text-ocre transition"><i class="fa-brands fa-pinterest-p"></i></a></div>
+</div>
+<p class="font-display font-extrabold tracking-[-0.06em] text-[clamp(3rem,15vw,15rem)] leading-[0.8] mt-16 text-beton/90">Ligne<span class="text-ocre">&amp;</span>Lumière</p>
+<p class="text-xs text-beton/40 mt-8">© 2026 — Mentions légales · Confidentialité</p>
+</footer>
+
+</body>
+</html>
